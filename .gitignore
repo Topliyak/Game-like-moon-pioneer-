@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+.vs/
+=======
+>>>>>>> 1979a34835472fa26e3c48a4af98b421273afd96
+.idea/
+Library
+Temp
+Logs
+<<<<<<< HEAD
+.vsconfig
+=======
+>>>>>>> 1979a34835472fa26e3c48a4af98b421273afd96
+*.sln
+*.csproj
+/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/obj/Debug/
+/HowPlace.sln.DotSettings.user
