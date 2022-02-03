@@ -37,16 +37,19 @@ public class DifferentResourcesStorageView : MonoBehaviour
 
 			if (i < resources.Count)
 			{
-				if (_modelsInStorage[i] == null)
+				if (_modelsInStorage[i] != null)
 				{
-					_modelsInStorage[i] = Instantiate(resources[i].Model, transform);
-					_modelsInStorage[i].transform.rotation = _firstCell.rotation;
-					_modelsInStorage[i].transform.localScale = Vector3.one * _cellsSize;
-					_modelsInStorage[i].transform.position = _firstCell.position;
-					_modelsInStorage[i].transform.position += _firstCell.right * _cellsOffset.x * column;
-					_modelsInStorage[i].transform.position += _firstCell.forward * _cellsOffset.z * row;
-					_modelsInStorage[i].transform.position += _firstCell.up * _cellsOffset.y * floor;
+					Destroy(_modelsInStorage[i]);
+					_modelsInStorage[i] = null;
 				}
+
+				_modelsInStorage[i] = Instantiate(resources[i].Model, transform);
+				_modelsInStorage[i].transform.rotation = _firstCell.rotation;
+				_modelsInStorage[i].transform.localScale = Vector3.one * _cellsSize;
+				_modelsInStorage[i].transform.position = _firstCell.position;
+				_modelsInStorage[i].transform.position += _firstCell.right * _cellsOffset.x * column;
+				_modelsInStorage[i].transform.position += _firstCell.forward * _cellsOffset.z * row;
+				_modelsInStorage[i].transform.position += _firstCell.up * _cellsOffset.y * floor;
 			}
 			else
 			{

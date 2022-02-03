@@ -4,31 +4,57 @@ using UnityEngine;
 
 public class FactoryWithFuelLinker : MonoBehaviour
 {
-	private bool _needFuel;
-
 	[SerializeField] private FuelDependencyFactory _factory;
 	[SerializeField] private Storage _fuelStorage;
+
+	public bool NeedFuel { get; set; }
 
 	private void Awake() => Init();
 
 	public void Init()
 	{
-		_needFuel = true;
+		NeedFuel = true;
 	}
 
-	public void TickFactoryAsNeededInFuel() => _needFuel = true;
+	public void OnFactoryDestroyFuel()
+	{
+		bool success = TryAddFuelToFactory();
+
+		if (success)
+		{
+			NeedFuel = false;
+		}
+		else
+		{
+			NeedFuel = true;
+		}
+	}
 
 	public void OnFuelInStorageAdded()
 	{
-		if (!_needFuel)
+		if (!NeedFuel)
 			return;
 
-		var availableFuelSet = _fuelStorage.PullOut(1);
+		bool success = TryAddFuelToFactory();
 
-		if (availableFuelSet.Count == 1)
+		if (success)
 		{
-			_factory.AddFuel(availableFuelSet.Resource);
-			_needFuel = false;
+			NeedFuel = false;
+		}
+	}
+
+	private bool TryAddFuelToFactory()
+	{
+		ResourceSet resourceSet = _fuelStorage.PullOut(1);
+
+		if (resourceSet.Count == 0)
+		{
+			return false;
+		}
+		else
+		{
+			_factory.AddFuel(resourceSet.Resource);
+			return true;
 		}
 	}
 }
