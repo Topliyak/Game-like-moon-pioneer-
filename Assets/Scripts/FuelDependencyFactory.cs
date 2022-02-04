@@ -9,8 +9,11 @@ public class FuelDependencyFactory : Factory
 
 	[Header("Events")]
 	[SerializeField] private UnityEvent _fuelDestroyedEvent;
+	[SerializeField] private UnityEvent<Resource> _fuelDownloadedEvent;
 
 	public UnityEvent FuelDestroyedEvent => _fuelDestroyedEvent;
+
+	public UnityEvent<Resource> FuelDownloadedEvent => _fuelDownloadedEvent;
 
 	public override bool CanProduct => base.CanProduct && HasUnitOfEveryFuel;
 
@@ -29,6 +32,7 @@ public class FuelDependencyFactory : Factory
 	public void AddFuel(Resource fuel)
 	{
 		_fuelAndCountPairs[fuel]++;
+		_fuelDownloadedEvent.Invoke(fuel);
 
 	}
 

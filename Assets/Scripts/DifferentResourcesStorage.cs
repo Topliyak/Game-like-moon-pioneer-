@@ -49,6 +49,17 @@ public class DifferentResourcesStorage : MonoBehaviour
 		return new ResourceSet(resourceSet.Resource, notAcceptedCount);
 	}
 
+	public void PutIn(Resource resource) => TryPutIn(resource);
+
+	public void ThrowOutAll()
+	{
+		int countBefore = ResourcesCount;
+		_resources.Clear();
+
+		if (countBefore != 0)
+			_resourceSetChangedEvent.Invoke(_resources);
+	}
+
 	public ResourceSet PutOut(Resource resource, int desiredCount)
 	{
 		int availableCount = 0;
