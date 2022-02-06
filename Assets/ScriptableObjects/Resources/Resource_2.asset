@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8963a8614fa47ae419397183dada7739, type: 3}
   m_Name: Resource_2
   m_EditorClassIdentifier: 
-  _name: Resource2
-  _model: {fileID: 5348300041553953314, guid: a8e9a52d549a6654e9b03eda96da95b2, type: 3}
+  _name: Green

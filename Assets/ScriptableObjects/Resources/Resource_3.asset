@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8963a8614fa47ae419397183dada7739, type: 3}
   m_Name: Resource_3
   m_EditorClassIdentifier: 
-  _name: Resource3
-  _model: {fileID: 8433956110419863786, guid: bcabacfbd480d7a4dba9e821e91ae569, type: 3}
+  _name: Blue

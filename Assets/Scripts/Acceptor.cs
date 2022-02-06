@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +6,24 @@ public class Acceptor : MonoBehaviour
 {
 	[SerializeField] private Storage _acceptingStorage;
 
-	public Resource AcceptedResource => _acceptingStorage.Resource;
+	public int FreeCellsCount => _acceptingStorage.FreeCellsCount;
 
-	virtual public ResourceSet AcceptAndReturnExtra(ResourceSet resourceSet)
+	public bool HasFreeCells => _acceptingStorage.HasFreeCells;
+
+	public bool CompatibleWith(Resource resource) => _acceptingStorage.CompatibleWith(resource);
+
+	public IEnumerable<ResourceUnit> AcceptAndReturnExtra(IEnumerable<ResourceUnit> resourceUnits)
 	{
-		if (resourceSet.Resource != _acceptingStorage.Resource)
-			return resourceSet;
+		if (_acceptingStorage.HasFreeCells == false)
+			return resourceUnits;
 
-		ResourceSet extra = _acceptingStorage.PutInAndReturnExtra(resourceSet);
+		var compatible = resourceUnits.Where(x => _acceptingStorage.CompatibleWith(x.Resource));
+
+		if (compatible.Count() == 0)
+			return resourceUnits;
+
+		var extra = resourceUnits.Where(x => _acceptingStorage.CompatibleWith(x.Resource) == false).ToList();
+		extra.AddRange(_acceptingStorage.PutInAndReturnExtra(compatible));
 
 		return extra;
 	}

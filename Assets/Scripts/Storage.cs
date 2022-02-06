@@ -1,97 +1,138 @@
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Storage : MonoBehaviour
 {
-	private int _resourcesCount;
+	private List<ResourceUnit> _resourceUnits;
+	private static UnityException _incompatibleResourcesTypesException;
+	private static UnityException _cantAddResourceStorageIsFullException;
 
-	private UnityException _incompatibleResourcesTypesError;
-
-	[SerializeField] private Resource _resource;
 	[SerializeField] private int _cellsCount;
+	[SerializeField] private Resource[] _compatibleResources;
 
 	[Header("Events")]
-	[SerializeField] private UnityEvent _storageIsFullEvent;
-	[SerializeField] private UnityEvent _storageHadFreeCellsEvent;
-	[SerializeField] private UnityEvent _inStorageAddedResourcesEvent;
-	[SerializeField] private UnityEvent<ResourceSet> _resourcesCountChangedEvent;
+	[SerializeField] private UnityEvent<object, ResourceUnit> _putInEvent;
+	[SerializeField] private UnityEvent<object, ResourceUnit> _pullOutEvent;
+	[SerializeField] private UnityEvent<object> _storageIsFullEvent;
 
-	public UnityEvent StorageIsFullEvent => _storageIsFullEvent;
+	public UnityEvent<object, ResourceUnit> PutInEvent => _putInEvent;
 
-	public UnityEvent StorageHadFreeCellsEvent => _storageHadFreeCellsEvent;
+	public UnityEvent<object, ResourceUnit> PullOutEvent => _pullOutEvent;
 
-	public UnityEvent InStorageAddedResourcesEvent => _inStorageAddedResourcesEvent;
+	public UnityEvent<object> StorageIsFullEvent => _storageIsFullEvent;
 
-	public UnityEvent<ResourceSet> ResourcesCountChangedEvent => _resourcesCountChangedEvent;
+	public int CellsCount => _cellsCount;
 
-	public Resource Resource => _resource;
+	public int FreeCellsCount => _cellsCount - _resourceUnits.Count;
 
-	public int FreeCells => _cellsCount - _resourcesCount;
+	public bool HasFreeCells => FreeCellsCount > 0;
 
-	public int ResourcesCount
+	public int ResourcesCount => _resourceUnits.Count;
+
+	static Storage()
 	{
-		get 
-		{
-			return _resourcesCount;
-		}
-		private set
-		{
-			value = Mathf.Clamp(value, 0, _cellsCount);
-
-			if (value == _cellsCount)
-			{
-				_storageIsFullEvent.Invoke();
-			}
-
-			int countBeforeAssignment = _resourcesCount;
-			_resourcesCount = value;
-
-			if (_resourcesCount > countBeforeAssignment)
-			{
-				_inStorageAddedResourcesEvent.Invoke();
-				_resourcesCountChangedEvent.Invoke(new ResourceSet(_resource, _resourcesCount));
-			}
-			else if (_resourcesCount < countBeforeAssignment)
-			{
-				_storageHadFreeCellsEvent.Invoke();
-				_resourcesCountChangedEvent.Invoke(new ResourceSet(_resource, _resourcesCount));
-			}
-		}
+		_incompatibleResourcesTypesException = new UnityException("Incompatible resources types");
+		_cantAddResourceStorageIsFullException = new UnityException("Cant add resource, storage iss full");
 	}
 
 	private void Awake() => Init();
 
-	public void Init()
+	private void Init()
 	{
-		_incompatibleResourcesTypesError = new UnityException("Incompatible resources types");
+		_resourceUnits = new List<ResourceUnit>();
 	}
 
-	public ResourceSet PullOut(int desiredCount)
-	{
-		int dispensedCount = Mathf.Min(desiredCount, ResourcesCount);
-		ResourcesCount -= dispensedCount;
+	public bool CompatibleWith(Resource resource) => _compatibleResources.Contains(resource);
 
-		return new ResourceSet(_resource, dispensedCount);
+	public IEnumerable<ResourceUnit> PutInAndReturnExtra(ResourceUnit resourceUnit)
+	{
+		return PutInAndReturnExtra(new[] { resourceUnit });
 	}
 
-	public ResourceSet PutInAndReturnExtra(ResourceSet resourceSet)
+	public IEnumerable<ResourceUnit> PutInAndReturnExtra(IEnumerable<ResourceUnit> resourceUnits)
 	{
-		if (resourceSet.Resource != _resource)
-			throw _incompatibleResourcesTypesError;
+		List<ResourceUnit> extra = new List<ResourceUnit>();
 
-		int acceptedCount = Mathf.Min(resourceSet.Count, FreeCells);
-		ResourcesCount += acceptedCount;
+		foreach (var resource in resourceUnits)
+		{
+			if (HasFreeCells)
+			{
+				AddResourceUnit(resource);
+			}
+			else
+			{
+				extra.Add(resource);
+			}
+		}
 
-		return new ResourceSet(_resource, resourceSet.Count - acceptedCount);
+		return extra;
 	}
 
-	public void PutIn(ResourceSet resourceSet)
+	public IEnumerable<ResourceUnit> PullOutAll()
 	{
-		if (resourceSet.Resource != _resource)
-			throw _incompatibleResourcesTypesError;
+		var resourceUnits = new List<ResourceUnit>();
 
-		ResourcesCount += resourceSet.Count;
+		for (int i = _resourceUnits.Count - 1; i >= 0; i--)
+			resourceUnits.Add(PullOutResourceUnit(i));
+
+		return resourceUnits;
+	}
+
+	public IEnumerable<ResourceUnit> PullOutAll(System.Func<ResourceUnit, bool> predicate)
+	{
+		var resourceUnits = new List<ResourceUnit>();
+
+		for (int i = _resourceUnits.Count - 1; i >= 0; i--)
+			if (predicate.Invoke(_resourceUnits[i]))
+				resourceUnits.Add(PullOutResourceUnit(i));
+
+		return resourceUnits;
+	}
+
+	public IEnumerable<ResourceUnit> PullOut(Resource resource, int desiredCount)
+	{
+		List<ResourceUnit> resources = new List<ResourceUnit>();
+		int pulledOut = 0;
+
+		for (int i = _resourceUnits.Count - 1; i >= 0; i--)
+		{
+			if (pulledOut >= desiredCount)
+				break;
+
+			if (_resourceUnits[i].Resource == resource)
+			{
+				resources.Add(PullOutResourceUnit(i));
+				pulledOut++;
+			}
+		}
+
+		return resources;
+	}
+
+	private void AddResourceUnit(ResourceUnit resourceUnit)
+	{
+		if (!HasFreeCells)
+			throw _cantAddResourceStorageIsFullException;
+
+		if (resourceUnit == null)
+			throw new System.NullReferenceException("Resource unit cant be added to storage as null");
+		
+		if (CompatibleWith(resourceUnit.Resource) == false)
+			throw _incompatibleResourcesTypesException;
+
+		_resourceUnits.Add(resourceUnit);
+		_putInEvent.Invoke(this, resourceUnit);
+	}
+
+	private ResourceUnit PullOutResourceUnit(int index)
+	{
+		ResourceUnit resourceUnit = _resourceUnits[index];
+
+		_resourceUnits.RemoveAt(index);
+		_pullOutEvent.Invoke(this, resourceUnit);
+
+		return resourceUnit;
 	}
 }

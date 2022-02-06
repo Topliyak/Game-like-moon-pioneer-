@@ -6,9 +6,6 @@ using UnityEngine;
 public class Resource: ScriptableObject
 {
 	[SerializeField] private string _name;
-	[SerializeField] private GameObject _model;
 
 	public string Name => _name;
-
-	public GameObject Model => _model;
 }

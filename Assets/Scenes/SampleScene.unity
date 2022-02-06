@@ -213,12 +213,124 @@ Transform:
   m_LocalPosition: {x: -6.28, y: 0, z: 5.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1599643842}
+  - {fileID: 785696894}
+  - {fileID: 202923465}
+  - {fileID: 166329034}
+  - {fileID: 617906924}
+  - {fileID: 568057296}
   - {fileID: 1583151199}
   - {fileID: 129114530}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -213.731, z: 0}
+--- !u!1 &51453079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51453080}
+  - component: {fileID: 51453083}
+  - component: {fileID: 51453082}
+  - component: {fileID: 51453081}
+  - component: {fileID: 51453084}
+  m_Layer: 5
+  m_Name: MessageTemplate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &51453080
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51453079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 485385042}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -38.028168}
+  m_SizeDelta: {x: 540, y: 76.056335}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &51453081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51453079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &51453082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51453079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 90
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Message
+--- !u!222 &51453083
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51453079}
+  m_CullTransparentMesh: 1
+--- !u!114 &51453084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51453079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8e59e98e6547f4bb8b3f16f4236ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 51453082}
 --- !u!1 &68534126
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,27 +429,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6709d0e0002185f4f8253a41f3f07cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _producedResource: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
-  _secondsToProductOneUnit: 2
-  _resourceProducedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2054086006}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: AcceptResourceFromFactory
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _pausedEvent:
+  _resource: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _secondsForProductResourceUnit: 3
+  _storageForFuelLoadedToFactory: {fileID: 167997683}
+  _freeResourceUnits: {fileID: 1164048636}
+  _fuelTypes: []
+  _turnedOffEvent:
     m_PersistentCalls:
       m_Calls: []
-  _launchedEvent:
+  _turnedOnEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _fuelIsOverEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _workAgainEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _producedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _producedResourceUnitNotPulledOutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _fuelDestroyedEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!65 &79779451
@@ -412,7 +527,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 167997685}
   m_Father: {fileID: 10983414}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -427,7 +543,7 @@ GameObject:
   - component: {fileID: 129114530}
   - component: {fileID: 129114531}
   m_Layer: 0
-  m_Name: ProductionController
+  m_Name: FactoryWithOutputStorageLinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 30843861}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &129114531
 MonoBehaviour:
@@ -456,7 +572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 129114529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4c3004b4b49c14ca843e5572481b45, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c05a87ba97a69a44959f89b96d16036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _factory: {fileID: 785696890}
@@ -491,35 +607,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resource: {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
   _cellsCount: 3
-  _storageIsFullEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _storageHadFreeCellsEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _inStorageAddedResourcesEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 293282892}
-        m_TargetAssemblyTypeName: FactoryWithFuelLinker, Assembly-CSharp
-        m_MethodName: OnFuelInStorageAdded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _resourcesCountChangedEvent:
+  _compatibleResources:
+  - {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 166329033}
         m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -529,6 +625,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 166329033}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &166329033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,13 +655,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 1
-  _cellsColumns: 3
-  _cellsFloors: 1
-  _cellsSize: 0.5
+  _rows: 1
+  _columns: 3
+  _floors: 2
+  _cellSize: 0.5
   _cellsOffset: {x: 0.52, y: 0.52, z: 0.52}
   _firstCell: {fileID: 2107702438}
-  drawCells: 0
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 10
+  _maxDistanceForStopPositioning: 0.01
+  drawCells: 1
 --- !u!4 &166329034
 Transform:
   m_ObjectHideFlags: 0
@@ -555,16 +675,98 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166329031}
-  m_LocalRotation: {x: -0, y: -0.8537853, z: -0, w: 0.52062535}
-  m_LocalPosition: {x: -3.84, y: 0, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0.8537852, z: -0, w: 0.5206253}
+  m_LocalPosition: {x: -3.8400004, y: 0, z: 0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 508825925}
   - {fileID: 2107702438}
   - {fileID: 1683476024}
-  m_Father: {fileID: 1599643842}
+  m_Father: {fileID: 30843861}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -117.252, z: 0}
+--- !u!1 &167997682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167997685}
+  - component: {fileID: 167997683}
+  - component: {fileID: 167997684}
+  m_Layer: 0
+  m_Name: FuelLoadedToFactoryStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &167997683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167997682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cellsCount: 0
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _putInEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &167997684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167997682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rows: 1
+  _columns: 1
+  _floors: 2
+  _cellSize: 0.5
+  _cellsOffset: {x: 0.51, y: 0.51, z: 0.51}
+  _firstCell: {fileID: 2031572455}
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 1
+  _scalingSpeed: 1
+  _rotationSpeed: 0
+  _maxDistanceForStopPositioning: 0.1
+  drawCells: 0
+--- !u!4 &167997685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167997682}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.522, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_Children:
+  - {fileID: 2031572455}
+  m_Father: {fileID: 79779454}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202923462
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,35 +797,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resource: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
   _cellsCount: 3
-  _storageIsFullEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _storageHadFreeCellsEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _inStorageAddedResourcesEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 617906923}
-        m_TargetAssemblyTypeName: FactoryWithFuelLinker, Assembly-CSharp
-        m_MethodName: OnFuelInStorageAdded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _resourcesCountChangedEvent:
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 202923464}
         m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -633,6 +815,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 202923464}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &202923464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,13 +845,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 1
-  _cellsColumns: 3
-  _cellsFloors: 1
-  _cellsSize: 0.5
+  _rows: 1
+  _columns: 3
+  _floors: 2
+  _cellSize: 0.5
   _cellsOffset: {x: 0.52, y: 0.52, z: 0.52}
   _firstCell: {fileID: 1452784523}
-  drawCells: 0
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 10
+  _maxDistanceForStopPositioning: 0.1
+  drawCells: 1
 --- !u!4 &202923465
 Transform:
   m_ObjectHideFlags: 0
@@ -659,14 +865,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202923462}
-  m_LocalRotation: {x: -0, y: -0.51875764, z: -0, w: 0.85492134}
-  m_LocalPosition: {x: -1.66, y: 0, z: -0.01}
+  m_LocalRotation: {x: -0, y: -0.51875764, z: -0, w: 0.8549214}
+  m_LocalPosition: {x: -1.6600001, y: 0, z: -0.01000011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 564887177}
   - {fileID: 1452784523}
   - {fileID: 420257610}
-  m_Father: {fileID: 1599643842}
+  m_Father: {fileID: 30843861}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -62.498, z: 0}
 --- !u!1 &204896597
@@ -685,7 +891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &204896598
 RectTransform:
   m_ObjectHideFlags: 0
@@ -706,8 +912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 210, y: 0}
+  m_AnchoredPosition: {x: 0, y: -640}
+  m_SizeDelta: {x: 210, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204896599
 MonoBehaviour:
@@ -848,51 +1054,6 @@ Transform:
   m_Father: {fileID: 865133025}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &293282890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 293282891}
-  - component: {fileID: 293282892}
-  m_Layer: 0
-  m_Name: FuelController2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &293282891
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293282890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1599643842}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &293282892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293282890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3141b39e7e5d8be4f989e16c0a246955, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _factory: {fileID: 785696890}
-  _fuelStorage: {fileID: 166329032}
 --- !u!1 &387856204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,47 +1347,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resource: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
   _cellsCount: 18
-  _storageIsFullEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2054086006}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: PauseFactory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _storageHadFreeCellsEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2054086006}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: LaunchFactoryIfPaused
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _inStorageAddedResourcesEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _resourcesCountChangedEvent:
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 421976853}
         m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1236,6 +1365,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 421976853}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &421976853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,12 +1395,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 3
-  _cellsColumns: 3
-  _cellsFloors: 2
-  _cellsSize: 0.5
+  _rows: 3
+  _columns: 3
+  _floors: 2
+  _cellSize: 0.5
   _cellsOffset: {x: 0.51, y: 0.51, z: 0.51}
   _firstCell: {fileID: 1546447947}
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 10
+  _maxDistanceForStopPositioning: 0.01
   drawCells: 0
 --- !u!4 &421976854
 Transform:
@@ -1347,6 +1500,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483550477}
   m_CullTransparentMesh: 1
+--- !u!1 &485385041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485385042}
+  - component: {fileID: 485385044}
+  - component: {fileID: 485385043}
+  - component: {fileID: 485385045}
+  m_Layer: 5
+  m_Name: Messages
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &485385042
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485385041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 51453080}
+  m_Father: {fileID: 571455283}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &485385043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485385041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &485385044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485385041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &485385045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485385041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95d2eb665a0ca8438266f26823d173f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _messageTemplate: {fileID: 51453084}
+  _timeMessageDisplaying: 3
 --- !u!1 &508825924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,17 +1810,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 568057293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa1a0e8f8c1e9448b381a36110ca95a, type: 3}
+  m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsCount: 10
-  _resources: []
-  _resourceSetChangedEvent:
+  _cellsCount: 2
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  - {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 568057295}
-        m_TargetAssemblyTypeName: DifferentResourcesStorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1584,6 +1832,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 568057295}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &568057295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,16 +1859,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 568057293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114f056ad69d9ce49a15a4bd217cbebb, type: 3}
+  m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 1
-  _cellsColumns: 1
-  _cellsFloors: 10
-  _cellsSize: 0.5
-  _cellsOffset: {x: 0.52, y: 0.52, z: 0.52}
+  _rows: 1
+  _columns: 1
+  _floors: 3
+  _cellSize: 0.5
+  _cellsOffset: {x: 0.51, y: 0.51, z: 0.51}
   _firstCell: {fileID: 1069049452}
-  drawCells: 0
+  _firstPriorityDimension: 2
+  _secondPriorityDimension: 0
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 10
+  _maxDistanceForStopPositioning: 0.01
+  drawCells: 1
 --- !u!4 &568057296
 Transform:
   m_ObjectHideFlags: 0
@@ -1610,13 +1882,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568057293}
-  m_LocalRotation: {x: -0, y: 0.95698833, z: -0, w: -0.29012647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1069049452}
-  m_Father: {fileID: 1599643842}
-  m_RootOrder: 5
+  m_Father: {fileID: 30843861}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &571455279
 GameObject:
@@ -1710,6 +1982,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1770404153}
+  - {fileID: 485385042}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1729,7 +2002,7 @@ GameObject:
   - component: {fileID: 617906924}
   - component: {fileID: 617906923}
   m_Layer: 0
-  m_Name: FuelController1
+  m_Name: FactoryFuelLinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1744,11 +2017,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 617906922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3141b39e7e5d8be4f989e16c0a246955, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e3d04af54e6244bbe2aa89771414f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _factory: {fileID: 785696890}
-  _fuelStorage: {fileID: 202923463}
+  _fuelStorages:
+  - {fileID: 202923463}
+  - {fileID: 166329032}
 --- !u!4 &617906924
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,11 +2031,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617906922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1599643842}
+  m_Father: {fileID: 30843861}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &684024884
@@ -1889,35 +2164,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resource: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
   _cellsCount: 3
-  _storageIsFullEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _storageHadFreeCellsEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _inStorageAddedResourcesEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 831109052}
-        m_TargetAssemblyTypeName: FactoryWithFuelLinker, Assembly-CSharp
-        m_MethodName: OnFuelInStorageAdded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _resourcesCountChangedEvent:
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 685653317}
         m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1927,6 +2182,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 685653317}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &685653317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,12 +2212,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 1
-  _cellsColumns: 3
-  _cellsFloors: 1
-  _cellsSize: 0.5
+  _rows: 1
+  _columns: 3
+  _floors: 2
+  _cellSize: 0.5
   _cellsOffset: {x: 0.52, y: 0.52, z: 0.52}
   _firstCell: {fileID: 1998399476}
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 0
+  _maxDistanceForStopPositioning: 0.01
   drawCells: 0
 --- !u!4 &685653318
 Transform:
@@ -1954,13 +2233,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685653315}
   m_LocalRotation: {x: -0, y: -0.51875764, z: -0, w: 0.85492134}
-  m_LocalPosition: {x: -1.66, y: 0, z: -0.01}
+  m_LocalPosition: {x: -1.6600001, y: 0, z: -0.010000229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1626351012}
   - {fileID: 1998399476}
   - {fileID: 1395920118}
-  m_Father: {fileID: 2084880341}
+  m_Father: {fileID: 1444452820}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -62.498, z: 0}
 --- !u!1 &705507993
@@ -2085,104 +2364,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 785696889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e687cc1370839499a5b710d7dd1afd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6709d0e0002185f4f8253a41f3f07cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _producedResource: {fileID: 11400000, guid: 08dfb4e95688ecb409c87c05405a8e9c, type: 2}
-  _secondsToProductOneUnit: 3
-  _resourceProducedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 129114531}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: AcceptResourceFromFactory
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 785696890}
-        m_TargetAssemblyTypeName: FuelDependencyFactory, Assembly-CSharp
-        m_MethodName: DestroyEveryFuelUnit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _pausedEvent:
+  _resource: {fileID: 11400000, guid: 08dfb4e95688ecb409c87c05405a8e9c, type: 2}
+  _secondsForProductResourceUnit: 3
+  _storageForFuelLoadedToFactory: {fileID: 568057294}
+  _freeResourceUnits: {fileID: 1164048636}
+  _fuelTypes:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  - {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+  _turnedOffEvent:
     m_PersistentCalls:
       m_Calls: []
-  _launchedEvent:
+  _turnedOnEvent:
     m_PersistentCalls:
       m_Calls: []
-  _fuelAndCountPairs:
-    pairs:
-    - key: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
-      value: 0
-    - key: {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
-      value: 0
+  _fuelIsOverEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _workAgainEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _producedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _producedResourceUnitNotPulledOutEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _fuelDestroyedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 568057294}
-        m_TargetAssemblyTypeName: DifferentResourcesStorage, Assembly-CSharp
-        m_MethodName: ThrowOutAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 617906923}
-        m_TargetAssemblyTypeName: FactoryWithFuelLinker, Assembly-CSharp
-        m_MethodName: OnFactoryDestroyFuel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 293282892}
-        m_TargetAssemblyTypeName: FactoryWithFuelLinker, Assembly-CSharp
-        m_MethodName: OnFactoryDestroyFuel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _fuelDownloadedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 568057294}
-        m_TargetAssemblyTypeName: DifferentResourcesStorage, Assembly-CSharp
-        m_MethodName: PutIn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &785696891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2252,11 +2464,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785696889}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 1599643842}
+  m_Father: {fileID: 30843861}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &831109051
@@ -2270,7 +2482,7 @@ GameObject:
   - component: {fileID: 831109053}
   - component: {fileID: 831109052}
   m_Layer: 0
-  m_Name: FuelController
+  m_Name: FactoryFuelLinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2285,11 +2497,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 831109051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3141b39e7e5d8be4f989e16c0a246955, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e3d04af54e6244bbe2aa89771414f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _factory: {fileID: 939406340}
-  _fuelStorage: {fileID: 685653316}
+  _fuelStorages:
+  - {fileID: 685653316}
 --- !u!4 &831109053
 Transform:
   m_ObjectHideFlags: 0
@@ -2297,11 +2510,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831109051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2084880341}
+  m_Father: {fileID: 1444452820}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865133022
@@ -2331,17 +2544,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 865133022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa1a0e8f8c1e9448b381a36110ca95a, type: 3}
+  m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsCount: 10
-  _resources: []
-  _resourceSetChangedEvent:
+  _cellsCount: 1
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 865133024}
-        m_TargetAssemblyTypeName: DifferentResourcesStorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2351,6 +2565,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 865133024}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &865133024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2360,16 +2592,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 865133022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114f056ad69d9ce49a15a4bd217cbebb, type: 3}
+  m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 1
-  _cellsColumns: 1
-  _cellsFloors: 10
-  _cellsSize: 0.5
+  _rows: 1
+  _columns: 1
+  _floors: 3
+  _cellSize: 0.55
   _cellsOffset: {x: 0.52, y: 0.52, z: 0.52}
   _firstCell: {fileID: 290092063}
-  drawCells: 0
+  _firstPriorityDimension: 2
+  _secondPriorityDimension: 0
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 0
+  _maxDistanceForStopPositioning: 0.01
+  drawCells: 1
 --- !u!4 &865133025
 Transform:
   m_ObjectHideFlags: 0
@@ -2377,13 +2615,43 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865133022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.443, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 290092063}
-  m_Father: {fileID: 2084880341}
+  m_Father: {fileID: 1444452820}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &894235128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894235129}
+  m_Layer: 0
+  m_Name: FactoryStoppedNotificator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894235129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894235128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 184.57872, y: 362.51166, z: -1.0980988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &939406339
 GameObject:
@@ -2414,90 +2682,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 939406339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e687cc1370839499a5b710d7dd1afd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6709d0e0002185f4f8253a41f3f07cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _producedResource: {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
-  _secondsToProductOneUnit: 4
-  _resourceProducedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1343190635}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: AcceptResourceFromFactory
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 939406340}
-        m_TargetAssemblyTypeName: FuelDependencyFactory, Assembly-CSharp
-        m_MethodName: DestroyEveryFuelUnit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _pausedEvent:
+  _resource: {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+  _secondsForProductResourceUnit: 4
+  _storageForFuelLoadedToFactory: {fileID: 865133023}
+  _freeResourceUnits: {fileID: 1164048636}
+  _fuelTypes:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  _turnedOffEvent:
     m_PersistentCalls:
       m_Calls: []
-  _launchedEvent:
+  _turnedOnEvent:
     m_PersistentCalls:
       m_Calls: []
-  _fuelAndCountPairs:
-    pairs:
-    - key: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
-      value: 0
+  _fuelIsOverEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _workAgainEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _producedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _producedResourceUnitNotPulledOutEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _fuelDestroyedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 865133023}
-        m_TargetAssemblyTypeName: DifferentResourcesStorage, Assembly-CSharp
-        m_MethodName: ThrowOutAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 831109052}
-        m_TargetAssemblyTypeName: FactoryWithFuelLinker, Assembly-CSharp
-        m_MethodName: OnFactoryDestroyFuel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _fuelDownloadedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 865133023}
-        m_TargetAssemblyTypeName: DifferentResourcesStorage, Assembly-CSharp
-        m_MethodName: PutIn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &939406341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2567,11 +2781,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939406339}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 2084880341}
+  m_Father: {fileID: 1444452820}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
@@ -2844,15 +3058,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1136575207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114f056ad69d9ce49a15a4bd217cbebb, type: 3}
+  m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 2
-  _cellsColumns: 1
-  _cellsFloors: 10
-  _cellsSize: 0.2
-  _cellsOffset: {x: 0.21, y: 0.21, z: 0.21}
+  _rows: 3
+  _columns: 2
+  _floors: 10
+  _cellSize: 0.3
+  _cellsOffset: {x: 0.31, y: 0.31, z: 0.31}
   _firstCell: {fileID: 1623046973}
+  _firstPriorityDimension: 2
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 10
+  _maxDistanceForStopPositioning: 0.01
   drawCells: 0
 --- !u!114 &1136575210
 MonoBehaviour:
@@ -2863,17 +3083,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1136575207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa1a0e8f8c1e9448b381a36110ca95a, type: 3}
+  m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsCount: 10
-  _resources: []
-  _resourceSetChangedEvent:
+  _cellsCount: 60
+  _compatibleResources:
+  - {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+  - {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+  - {fileID: 11400000, guid: 08dfb4e95688ecb409c87c05405a8e9c, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1136575209}
-        m_TargetAssemblyTypeName: DifferentResourcesStorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2883,6 +3106,76 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1136575209}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &1164048635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164048637}
+  - component: {fileID: 1164048636}
+  m_Layer: 0
+  m_Name: FreeResourceUnits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1164048636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164048635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b30bb7ef727fc94383c8676f1333962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxUnitCountOfEveryResource: 50
+  _resourceUnitTemplatePairs:
+    pairs:
+    - key: {fileID: 11400000, guid: 2fbdb589c7091964caf344cc27e01087, type: 2}
+      value: {fileID: 7854991658180687082, guid: db3c131702a98e54d99203d427add105, type: 3}
+    - key: {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+      value: {fileID: 5120885486745815720, guid: a8e9a52d549a6654e9b03eda96da95b2, type: 3}
+    - key: {fileID: 11400000, guid: 08dfb4e95688ecb409c87c05405a8e9c, type: 2}
+      value: {fileID: 5241855267301120404, guid: bcabacfbd480d7a4dba9e821e91ae569, type: 3}
+--- !u!4 &1164048637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164048635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0052732, y: -0.061762393, z: 1.4072049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205738950
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,7 +3363,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1276664024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18dba5349ad7e6846852a179781ac0b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 940a8971437f2ff4f81314dd5632dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _storage: {fileID: 1583151197}
@@ -3193,7 +3486,7 @@ GameObject:
   - component: {fileID: 1343190634}
   - component: {fileID: 1343190635}
   m_Layer: 0
-  m_Name: ProductionController
+  m_Name: FactoryWithOutputStorageLinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3211,7 +3504,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1444452820}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1343190635
 MonoBehaviour:
@@ -3222,7 +3515,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1343190633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4c3004b4b49c14ca843e5572481b45, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c05a87ba97a69a44959f89b96d16036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _factory: {fileID: 939406340}
@@ -3315,47 +3608,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resource: {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
   _cellsCount: 18
-  _storageIsFullEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1343190635}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: PauseFactory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _storageHadFreeCellsEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1343190635}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: LaunchFactoryIfPaused
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _inStorageAddedResourcesEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _resourcesCountChangedEvent:
+  _compatibleResources:
+  - {fileID: 11400000, guid: c30998584d9654445bff2fb4cf71e2dd, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1422254671}
         m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3365,6 +3626,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1422254671}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1422254671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3377,12 +3656,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 3
-  _cellsColumns: 3
-  _cellsFloors: 2
-  _cellsSize: 0.5
+  _rows: 3
+  _columns: 3
+  _floors: 2
+  _cellSize: 0.5
   _cellsOffset: {x: 0.51, y: 0.51, z: 0.51}
   _firstCell: {fileID: 1766171217}
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 0
+  _maxDistanceForStopPositioning: 0.01
   drawCells: 0
 --- !u!4 &1422254672
 Transform:
@@ -3399,7 +3684,7 @@ Transform:
   - {fileID: 1766171217}
   - {fileID: 1997408003}
   m_Father: {fileID: 1444452820}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1444452819
 GameObject:
@@ -3428,7 +3713,10 @@ Transform:
   m_LocalPosition: {x: -3.74, y: 0, z: -4.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2084880341}
+  - {fileID: 939406344}
+  - {fileID: 685653318}
+  - {fileID: 831109053}
+  - {fileID: 865133025}
   - {fileID: 1422254672}
   - {fileID: 1343190634}
   m_Father: {fileID: 0}
@@ -3556,47 +3844,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171c4f7f3c518b14ea9f4403ad201680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resource: {fileID: 11400000, guid: 08dfb4e95688ecb409c87c05405a8e9c, type: 2}
   _cellsCount: 18
-  _storageIsFullEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 129114531}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: PauseFactory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _storageHadFreeCellsEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 129114531}
-        m_TargetAssemblyTypeName: ProducingController, Assembly-CSharp
-        m_MethodName: LaunchFactoryIfPaused
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _inStorageAddedResourcesEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _resourcesCountChangedEvent:
+  _compatibleResources:
+  - {fileID: 11400000, guid: 08dfb4e95688ecb409c87c05405a8e9c, type: 2}
+  _putInEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1583151198}
         m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
-        m_MethodName: UpdateView
+        m_MethodName: OnPutIn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3606,6 +3862,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _pullOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1583151198}
+        m_TargetAssemblyTypeName: StorageView, Assembly-CSharp
+        m_MethodName: OnPullOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _storageIsFullEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1583151198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3618,13 +3892,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f3d5c074ce3f40b4463514eb26473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellsRows: 3
-  _cellsColumns: 3
-  _cellsFloors: 2
-  _cellsSize: 0.5
+  _rows: 3
+  _columns: 3
+  _floors: 2
+  _cellSize: 0.5
   _cellsOffset: {x: 0.51, y: 0.51, z: 0.51}
   _firstCell: {fileID: 12366716}
-  drawCells: 0
+  _firstPriorityDimension: 0
+  _secondPriorityDimension: 1
+  _positioningSpeed: 10
+  _scalingSpeed: 10
+  _rotationSpeed: 10
+  _maxDistanceForStopPositioning: 0.01
+  drawCells: 1
 --- !u!4 &1583151199
 Transform:
   m_ObjectHideFlags: 0
@@ -3640,43 +3920,7 @@ Transform:
   - {fileID: 12366716}
   - {fileID: 1276664025}
   m_Father: {fileID: 30843861}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1599643841
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1599643842}
-  m_Layer: 0
-  m_Name: FuelDependencyFactory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1599643842
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599643841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 785696894}
-  - {fileID: 202923465}
-  - {fileID: 166329034}
-  - {fileID: 617906924}
-  - {fileID: 293282891}
-  - {fileID: 568057296}
-  m_Father: {fileID: 30843861}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623046972
 GameObject:
@@ -4102,7 +4346,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1997408002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18dba5349ad7e6846852a179781ac0b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 940a8971437f2ff4f81314dd5632dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _storage: {fileID: 1422254670}
@@ -4149,6 +4393,36 @@ Transform:
   m_Father: {fileID: 685653318}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2031572454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031572455}
+  m_Layer: 0
+  m_Name: FirstCell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031572455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031572454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.238, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 167997685}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2054086004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,7 +4434,7 @@ GameObject:
   - component: {fileID: 2054086005}
   - component: {fileID: 2054086006}
   m_Layer: 0
-  m_Name: ProductionController
+  m_Name: FactoryWithOutputStorageLinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4189,7 +4463,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054086004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4c3004b4b49c14ca843e5572481b45, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c05a87ba97a69a44959f89b96d16036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _factory: {fileID: 79779450}
@@ -4270,7 +4544,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2067601953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18dba5349ad7e6846852a179781ac0b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 940a8971437f2ff4f81314dd5632dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _storage: {fileID: 421976852}
@@ -4287,40 +4561,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.49, y: 1, z: 1.37}
   m_Center: {x: 0.26, y: 0.5, z: 0.19}
---- !u!1 &2084880340
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2084880341}
-  m_Layer: 0
-  m_Name: FuelDependencyFactory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2084880341
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084880340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 939406344}
-  - {fileID: 685653318}
-  - {fileID: 831109053}
-  - {fileID: 865133025}
-  m_Father: {fileID: 1444452820}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107702437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,10 +4604,10 @@ GameObject:
   - component: {fileID: 2132467741}
   - component: {fileID: 2132467740}
   - component: {fileID: 2132467739}
-  - component: {fileID: 2132467744}
   - component: {fileID: 2132467745}
   - component: {fileID: 2132467747}
   - component: {fileID: 2132467746}
+  - component: {fileID: 2132467744}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -4389,7 +4629,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &2132467740
 CapsuleCollider:
@@ -4479,10 +4719,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132467738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d61efb236c56f42aed5c020fd303a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 940a8971437f2ff4f81314dd5632dafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acceptingStorage: {fileID: 0}
   _storage: {fileID: 1136575210}
 --- !u!114 &2132467745
 MonoBehaviour:
@@ -4493,10 +4732,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132467738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c9da6c80a266d42b85a9cf74b9942f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bb094b911d89b645ae848d9be28ec7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _storage: {fileID: 1136575210}
+  _acceptingStorage: {fileID: 1136575210}
 --- !u!114 &2132467746
 MonoBehaviour:
   m_ObjectHideFlags: 0
