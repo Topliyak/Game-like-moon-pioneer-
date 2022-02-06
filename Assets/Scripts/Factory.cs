@@ -40,6 +40,8 @@ public class Factory : MonoBehaviour
 
 	public Dictionary<Resource, bool> FuelAndHasFuelPairs => _fuelAndHasFuelPairs;
 
+	public Resource Resource => _resource;
+
 	public bool TurnedOn { get; private set; }
 
 	public bool Producing { get; private set; }

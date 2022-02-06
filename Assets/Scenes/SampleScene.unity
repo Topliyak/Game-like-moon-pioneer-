@@ -442,16 +442,52 @@ MonoBehaviour:
       m_Calls: []
   _fuelIsOverEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnFuelIsOverAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _workAgainEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnFactoryWorkAgain
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _producedEvent:
     m_PersistentCalls:
       m_Calls: []
   _producedResourceUnitNotPulledOutEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnProducedResourceIsntPulledOutAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _fuelDestroyedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -577,6 +613,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _factory: {fileID: 785696890}
   _storage: {fileID: 1583151197}
+  _turnOffFactoryBecauseOfFullStorageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnStorageIsFullAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &166329031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,16 +2433,52 @@ MonoBehaviour:
       m_Calls: []
   _fuelIsOverEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnFuelIsOverAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _workAgainEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnFactoryWorkAgain
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _producedEvent:
     m_PersistentCalls:
       m_Calls: []
   _producedResourceUnitNotPulledOutEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnProducedResourceIsntPulledOutAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _fuelDestroyedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2632,6 +2719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 894235129}
+  - component: {fileID: 894235130}
   m_Layer: 0
   m_Name: FactoryStoppedNotificator
   m_TagString: Untagged
@@ -2653,6 +2741,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894235130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894235128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d0082d1e22c15408802bf75a2ca5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _messagesController: {fileID: 485385045}
 --- !u!1 &939406339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,16 +2800,52 @@ MonoBehaviour:
       m_Calls: []
   _fuelIsOverEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnFuelIsOverAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _workAgainEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnFactoryWorkAgain
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _producedEvent:
     m_PersistentCalls:
       m_Calls: []
   _producedResourceUnitNotPulledOutEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnProducedResourceIsntPulledOutAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _fuelDestroyedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3520,6 +3657,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _factory: {fileID: 939406340}
   _storage: {fileID: 1422254670}
+  _turnOffFactoryBecauseOfFullStorageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnStorageIsFullAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1395920117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,6 +4620,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _factory: {fileID: 79779450}
   _storage: {fileID: 421976852}
+  _turnOffFactoryBecauseOfFullStorageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 894235130}
+        m_TargetAssemblyTypeName: FactoryEventsNotificator, Assembly-CSharp
+        m_MethodName: OnStorageIsFullAndFactoryStopped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2058750689
 GameObject:
   m_ObjectHideFlags: 0

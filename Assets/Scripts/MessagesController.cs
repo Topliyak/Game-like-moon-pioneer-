@@ -10,6 +10,14 @@ public class MessagesController : MonoBehaviour
 	[SerializeField] private Message _messageTemplate;
 	[SerializeField] private float _timeMessageDisplaying;
 
+	private void Awake() => Init();
+
+	private void Init()
+	{
+		_messages = new List<Message>();
+		_timeMessagesDisplaying = new List<float>();
+	}
+
 	public void DisplayMessage(string text)
 	{
 		Message message = Instantiate(_messageTemplate, this.transform);
@@ -26,6 +34,7 @@ public class MessagesController : MonoBehaviour
 		{
 			if (_timeMessagesDisplaying[i] >= _timeMessageDisplaying)
 			{
+				Destroy(_messages[i].gameObject);
 				_timeMessagesDisplaying.RemoveAt(i);
 				_messages.RemoveAt(i);
 			}

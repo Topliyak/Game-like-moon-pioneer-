@@ -5,10 +5,13 @@ using UnityEngine.Events;
 
 public class FactoryWithOutputStorageLinker : MonoBehaviour
 {
-	private bool _storageFull = false;
-
 	[SerializeField] private Factory _factory;
 	[SerializeField] private Storage _storage;
+
+	[Header("Events")]
+	[SerializeField] private UnityEvent<object, Factory> _turnOffFactoryBecauseOfFullStorageEvent;
+
+	public UnityEvent<object, Factory> TurnOffFactoryBecauseOffFullStorageEvent => _turnOffFactoryBecauseOfFullStorageEvent;
 
 	private void OnEnable()
 	{
@@ -26,15 +29,17 @@ public class FactoryWithOutputStorageLinker : MonoBehaviour
 
 	private void OnStorageBecomeFull(object sender)
 	{
-		_factory.TurnOff();
-		_storageFull = true;
+		if (_factory.TurnedOn)
+		{
+			_factory.TurnOff();
+			_turnOffFactoryBecauseOfFullStorageEvent.Invoke(this, _factory);
+		}
 	}
 
 	private void OnStorageHadFreeCells(object sender, ResourceUnit resourceUnit)
 	{
-		if (_storageFull)
+		if (_factory.TurnedOn == false)
 		{
-			_storageFull = false;
 			_factory.TurnOn();
 		}
 	}

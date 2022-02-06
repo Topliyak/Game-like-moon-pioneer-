@@ -123,7 +123,15 @@ public class Storage : MonoBehaviour
 			throw _incompatibleResourcesTypesException;
 
 		_resourceUnits.Add(resourceUnit);
-		_putInEvent.Invoke(this, resourceUnit);
+
+		try
+		{
+			_putInEvent.Invoke(this, resourceUnit);
+		}
+		catch { }
+
+		if (HasFreeCells == false)
+			_storageIsFullEvent.Invoke(this);
 	}
 
 	private ResourceUnit PullOutResourceUnit(int index)

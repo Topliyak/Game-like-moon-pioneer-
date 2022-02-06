@@ -93,6 +93,9 @@ public class StorageView : MonoBehaviour
 			if (_resourceUnits[i] != resourceUnit && _resourceUnits[i] != null)
 				cellForRecord++;
 		}
+
+		for (int i = cellForRecord; i < _resourceUnits.Length; i++)
+			_resourceUnits[i] = null;
 	}
 
 	private Vector3 CalculatePosition(int cellIndex)
